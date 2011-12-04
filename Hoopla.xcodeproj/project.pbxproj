@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8387EC9A148AFFAA00D6C3BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC99148AFFAA00D6C3BF /* UIKit.framework */; };
+		8387EC9C148AFFAA00D6C3BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9B148AFFAA00D6C3BF /* Foundation.framework */; };
+		8387EC9E148AFFAA00D6C3BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */; };
+		8387ECA4148AFFAA00D6C3BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECA2148AFFAA00D6C3BF /* InfoPlist.strings */; };
+		8387ECA6148AFFAA00D6C3BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECA5148AFFAA00D6C3BF /* main.m */; };
+		8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */; };
+		8387ECAD148AFFAA00D6C3BF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECAB148AFFAA00D6C3BF /* MainStoryboard.storyboard */; };
+		8387ECB0148AFFAA00D6C3BF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECAF148AFFAA00D6C3BF /* FirstViewController.m */; };
+		8387ECB2148AFFAA00D6C3BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECB1148AFFAA00D6C3BF /* first.png */; };
+		8387ECB4148AFFAA00D6C3BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECB3148AFFAA00D6C3BF /* first@2x.png */; };
+		8387ECB7148AFFAA00D6C3BF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECB6148AFFAA00D6C3BF /* SecondViewController.m */; };
+		8387ECB9148AFFAA00D6C3BF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECB8148AFFAA00D6C3BF /* second.png */; };
+		8387ECBB148AFFAA00D6C3BF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECBA148AFFAA00D6C3BF /* second@2x.png */; };
+		8387ECC3148AFFAA00D6C3BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECC2148AFFAA00D6C3BF /* SenTestingKit.framework */; };
+		8387ECC4148AFFAA00D6C3BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC99148AFFAA00D6C3BF /* UIKit.framework */; };
+		8387ECC5148AFFAA00D6C3BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9B148AFFAA00D6C3BF /* Foundation.framework */; };
+		8387ECCD148AFFAA00D6C3BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECCB148AFFAA00D6C3BF /* InfoPlist.strings */; };
+		8387ECD0148AFFAA00D6C3BF /* HooplaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8387ECC6148AFFAA00D6C3BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8387EC8C148AFFA900D6C3BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8387EC94148AFFA900D6C3BF;
+			remoteInfo = Hoopla;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8387EC95148AFFAA00D6C3BF /* Hoopla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoopla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8387EC99148AFFAA00D6C3BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8387EC9B148AFFAA00D6C3BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8387ECA1148AFFAA00D6C3BF /* Hoopla-Info.plist */ = {isa = PBXFileReference; path = "Hoopla-Info.plist"; sourceTree = "<group>"; };
+		8387ECA3148AFFAA00D6C3BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8387ECA5148AFFAA00D6C3BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8387ECA7148AFFAA00D6C3BF /* Hoopla-Prefix.pch */ = {isa = PBXFileReference; path = "Hoopla-Prefix.pch"; sourceTree = "<group>"; };
+		8387ECA8148AFFAA00D6C3BF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8387ECAC148AFFAA00D6C3BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8387ECAE148AFFAA00D6C3BF /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		8387ECAF148AFFAA00D6C3BF /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		8387ECB1148AFFAA00D6C3BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		8387ECB3148AFFAA00D6C3BF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		8387ECB5148AFFAA00D6C3BF /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		8387ECB6148AFFAA00D6C3BF /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		8387ECB8148AFFAA00D6C3BF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		8387ECBA148AFFAA00D6C3BF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		8387ECC1148AFFAA00D6C3BF /* HooplaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HooplaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8387ECC2148AFFAA00D6C3BF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8387ECCA148AFFAA00D6C3BF /* HooplaTests-Info.plist */ = {isa = PBXFileReference; path = "HooplaTests-Info.plist"; sourceTree = "<group>"; };
+		8387ECCC148AFFAA00D6C3BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8387ECCE148AFFAA00D6C3BF /* HooplaTests.h */ = {isa = PBXFileReference; path = HooplaTests.h; sourceTree = "<group>"; };
+		8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HooplaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8387EC92148AFFA900D6C3BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8387EC9A148AFFAA00D6C3BF /* UIKit.framework in Frameworks */,
+				8387EC9C148AFFAA00D6C3BF /* Foundation.framework in Frameworks */,
+				8387EC9E148AFFAA00D6C3BF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8387ECBD148AFFAA00D6C3BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8387ECC3148AFFAA00D6C3BF /* SenTestingKit.framework in Frameworks */,
+				8387ECC4148AFFAA00D6C3BF /* UIKit.framework in Frameworks */,
+				8387ECC5148AFFAA00D6C3BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8387EC8A148AFFA900D6C3BF = {
+			isa = PBXGroup;
+			children = (
+				8387EC9F148AFFAA00D6C3BF /* Hoopla */,
+				8387ECC8148AFFAA00D6C3BF /* HooplaTests */,
+				8387EC98148AFFAA00D6C3BF /* Frameworks */,
+				8387EC96148AFFAA00D6C3BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8387EC96148AFFAA00D6C3BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8387EC95148AFFAA00D6C3BF /* Hoopla.app */,
+				8387ECC1148AFFAA00D6C3BF /* HooplaTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8387EC98148AFFAA00D6C3BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8387EC99148AFFAA00D6C3BF /* UIKit.framework */,
+				8387EC9B148AFFAA00D6C3BF /* Foundation.framework */,
+				8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */,
+				8387ECC2148AFFAA00D6C3BF /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8387EC9F148AFFAA00D6C3BF /* Hoopla */ = {
+			isa = PBXGroup;
+			children = (
+				8387ECA8148AFFAA00D6C3BF /* AppDelegate.h */,
+				8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */,
+				8387ECAB148AFFAA00D6C3BF /* MainStoryboard.storyboard */,
+				8387ECAE148AFFAA00D6C3BF /* FirstViewController.h */,
+				8387ECAF148AFFAA00D6C3BF /* FirstViewController.m */,
+				8387ECB1148AFFAA00D6C3BF /* first.png */,
+				8387ECB3148AFFAA00D6C3BF /* first@2x.png */,
+				8387ECB5148AFFAA00D6C3BF /* SecondViewController.h */,
+				8387ECB6148AFFAA00D6C3BF /* SecondViewController.m */,
+				8387ECB8148AFFAA00D6C3BF /* second.png */,
+				8387ECBA148AFFAA00D6C3BF /* second@2x.png */,
+				8387ECA0148AFFAA00D6C3BF /* Supporting Files */,
+			);
+			path = Hoopla;
+			sourceTree = "<group>";
+		};
+		8387ECA0148AFFAA00D6C3BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8387ECA1148AFFAA00D6C3BF /* Hoopla-Info.plist */,
+				8387ECA2148AFFAA00D6C3BF /* InfoPlist.strings */,
+				8387ECA5148AFFAA00D6C3BF /* main.m */,
+				8387ECA7148AFFAA00D6C3BF /* Hoopla-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8387ECC8148AFFAA00D6C3BF /* HooplaTests */ = {
+			isa = PBXGroup;
+			children = (
+				8387ECCE148AFFAA00D6C3BF /* HooplaTests.h */,
+				8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */,
+				8387ECC9148AFFAA00D6C3BF /* Supporting Files */,
+			);
+			path = HooplaTests;
+			sourceTree = "<group>";
+		};
+		8387ECC9148AFFAA00D6C3BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8387ECCA148AFFAA00D6C3BF /* HooplaTests-Info.plist */,
+				8387ECCB148AFFAA00D6C3BF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8387EC94148AFFA900D6C3BF /* Hoopla */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8387ECD3148AFFAA00D6C3BF /* Build configuration list for PBXNativeTarget "Hoopla" */;
+			buildPhases = (
+				8387EC91148AFFA900D6C3BF /* Sources */,
+				8387EC92148AFFA900D6C3BF /* Frameworks */,
+				8387EC93148AFFA900D6C3BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hoopla;
+			productName = Hoopla;
+			productReference = 8387EC95148AFFAA00D6C3BF /* Hoopla.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8387ECC0148AFFAA00D6C3BF /* HooplaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8387ECD6148AFFAA00D6C3BF /* Build configuration list for PBXNativeTarget "HooplaTests" */;
+			buildPhases = (
+				8387ECBC148AFFAA00D6C3BF /* Sources */,
+				8387ECBD148AFFAA00D6C3BF /* Frameworks */,
+				8387ECBE148AFFAA00D6C3BF /* Resources */,
+				8387ECBF148AFFAA00D6C3BF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8387ECC7148AFFAA00D6C3BF /* PBXTargetDependency */,
+			);
+			name = HooplaTests;
+			productName = HooplaTests;
+			productReference = 8387ECC1148AFFAA00D6C3BF /* HooplaTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8387EC8C148AFFA900D6C3BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Diversion, Inc.";
+			};
+			buildConfigurationList = 8387EC8F148AFFA900D6C3BF /* Build configuration list for PBXProject "Hoopla" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8387EC8A148AFFA900D6C3BF;
+			productRefGroup = 8387EC96148AFFAA00D6C3BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8387EC94148AFFA900D6C3BF /* Hoopla */,
+				8387ECC0148AFFAA00D6C3BF /* HooplaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8387EC93148AFFA900D6C3BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8387ECA4148AFFAA00D6C3BF /* InfoPlist.strings in Resources */,
+				8387ECAD148AFFAA00D6C3BF /* MainStoryboard.storyboard in Resources */,
+				8387ECB2148AFFAA00D6C3BF /* first.png in Resources */,
+				8387ECB4148AFFAA00D6C3BF /* first@2x.png in Resources */,
+				8387ECB9148AFFAA00D6C3BF /* second.png in Resources */,
+				8387ECBB148AFFAA00D6C3BF /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8387ECBE148AFFAA00D6C3BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8387ECCD148AFFAA00D6C3BF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8387ECBF148AFFAA00D6C3BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8387EC91148AFFA900D6C3BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8387ECA6148AFFAA00D6C3BF /* main.m in Sources */,
+				8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */,
+				8387ECB0148AFFAA00D6C3BF /* FirstViewController.m in Sources */,
+				8387ECB7148AFFAA00D6C3BF /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8387ECBC148AFFAA00D6C3BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8387ECD0148AFFAA00D6C3BF /* HooplaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8387ECC7148AFFAA00D6C3BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8387EC94148AFFA900D6C3BF /* Hoopla */;
+			targetProxy = 8387ECC6148AFFAA00D6C3BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8387ECA2148AFFAA00D6C3BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8387ECA3148AFFAA00D6C3BF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8387ECAB148AFFAA00D6C3BF /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8387ECAC148AFFAA00D6C3BF /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		8387ECCB148AFFAA00D6C3BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8387ECCC148AFFAA00D6C3BF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8387ECD1148AFFAA00D6C3BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8387ECD2148AFFAA00D6C3BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8387ECD4148AFFAA00D6C3BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoopla/Hoopla-Prefix.pch";
+				INFOPLIST_FILE = "Hoopla/Hoopla-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8387ECD5148AFFAA00D6C3BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoopla/Hoopla-Prefix.pch";
+				INFOPLIST_FILE = "Hoopla/Hoopla-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8387ECD7148AFFAA00D6C3BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hoopla.app/Hoopla";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoopla/Hoopla-Prefix.pch";
+				INFOPLIST_FILE = "HooplaTests/HooplaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8387ECD8148AFFAA00D6C3BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hoopla.app/Hoopla";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoopla/Hoopla-Prefix.pch";
+				INFOPLIST_FILE = "HooplaTests/HooplaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8387EC8F148AFFA900D6C3BF /* Build configuration list for PBXProject "Hoopla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8387ECD1148AFFAA00D6C3BF /* Debug */,
+				8387ECD2148AFFAA00D6C3BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8387ECD3148AFFAA00D6C3BF /* Build configuration list for PBXNativeTarget "Hoopla" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8387ECD4148AFFAA00D6C3BF /* Debug */,
+				8387ECD5148AFFAA00D6C3BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8387ECD6148AFFAA00D6C3BF /* Build configuration list for PBXNativeTarget "HooplaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8387ECD7148AFFAA00D6C3BF /* Debug */,
+				8387ECD8148AFFAA00D6C3BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8387EC8C148AFFA900D6C3BF /* Project object */;
+}
