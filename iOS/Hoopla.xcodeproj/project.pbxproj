@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8353B8B0148B4C7A00AA0141 /* tabbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8353B8AF148B4C7A00AA0141 /* tabbarbg.png */; };
+		8353B8B4148B4DC500AA0141 /* Recommendation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8353B8B3148B4DC500AA0141 /* Recommendation.m */; };
 		8387EC9A148AFFAA00D6C3BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC99148AFFAA00D6C3BF /* UIKit.framework */; };
 		8387EC9C148AFFAA00D6C3BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9B148AFFAA00D6C3BF /* Foundation.framework */; };
 		8387EC9E148AFFAA00D6C3BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8353B8AF148B4C7A00AA0141 /* tabbarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbg.png; sourceTree = "<group>"; };
+		8353B8B2148B4DC500AA0141 /* Recommendation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommendation.h; sourceTree = "<group>"; };
+		8353B8B3148B4DC500AA0141 /* Recommendation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommendation.m; sourceTree = "<group>"; };
 		8387EC95148AFFAA00D6C3BF /* Hoopla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoopla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8387EC99148AFFAA00D6C3BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8387EC9B148AFFAA00D6C3BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -190,6 +195,8 @@
 		83E43241148B260D00D9371E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8353B8B2148B4DC500AA0141 /* Recommendation.h */,
+				8353B8B3148B4DC500AA0141 /* Recommendation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 		83E4324E148B42ED00D9371E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8353B8AF148B4C7A00AA0141 /* tabbarbg.png */,
 				83CBBCFC148B48D200698A33 /* tabbarbg@2x.png */,
 				83E4324F148B42FF00D9371E /* logo-header.png */,
 				83E43250148B42FF00D9371E /* logo-header@2x.png */,
@@ -306,6 +314,7 @@
 				83E43251148B42FF00D9371E /* logo-header.png in Resources */,
 				83E43252148B42FF00D9371E /* logo-header@2x.png in Resources */,
 				83CBBCFD148B48D200698A33 /* tabbarbg@2x.png in Resources */,
+				8353B8B0148B4C7A00AA0141 /* tabbarbg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +352,7 @@
 				8387ECA6148AFFAA00D6C3BF /* main.m in Sources */,
 				8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */,
 				83E43246148B2B0E00D9371E /* HooplaTableViewController.m in Sources */,
+				8353B8B4148B4DC500AA0141 /* Recommendation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
