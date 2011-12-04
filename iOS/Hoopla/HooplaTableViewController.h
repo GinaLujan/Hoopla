@@ -10,4 +10,6 @@
 
 @interface HooplaTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *results;
+
 @end
