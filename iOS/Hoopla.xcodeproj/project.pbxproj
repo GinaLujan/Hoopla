@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8332AE17148B6D6D00067005 /* RecommendationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8332AE16148B6D6D00067005 /* RecommendationTableViewCell.m */; };
 		835162C7148B6416001357FE /* tablecellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 835162C5148B6416001357FE /* tablecellbg.png */; };
 		835162C8148B6416001357FE /* tablecellbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 835162C6148B6416001357FE /* tablecellbg@2x.png */; };
 		8353B8B0148B4C7A00AA0141 /* tabbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8353B8AF148B4C7A00AA0141 /* tabbarbg.png */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8332AE15148B6D6D00067005 /* RecommendationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendationTableViewCell.h; sourceTree = "<group>"; };
+		8332AE16148B6D6D00067005 /* RecommendationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendationTableViewCell.m; sourceTree = "<group>"; };
 		835162C5148B6416001357FE /* tablecellbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tablecellbg.png; sourceTree = "<group>"; };
 		835162C6148B6416001357FE /* tablecellbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tablecellbg@2x.png"; sourceTree = "<group>"; };
 		8353B8AF148B4C7A00AA0141 /* tabbarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbg.png; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8332AE13148B6D3F00067005 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				8332AE15148B6D6D00067005 /* RecommendationTableViewCell.h */,
+				8332AE16148B6D6D00067005 /* RecommendationTableViewCell.m */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		8387EC8A148AFFA900D6C3BF = {
 			isa = PBXGroup;
 			children = (
@@ -137,9 +149,10 @@
 		8387EC9F148AFFAA00D6C3BF /* Hoopla */ = {
 			isa = PBXGroup;
 			children = (
+				83E43243148B262600D9371E /* Storyboards */,
+				8332AE13148B6D3F00067005 /* TableViewCells */,
 				83E4324E148B42ED00D9371E /* Images */,
 				83E43247148B30EA00D9371E /* Data */,
-				83E43243148B262600D9371E /* Storyboards */,
 				83E43242148B261900D9371E /* Controllers */,
 				83E43241148B260D00D9371E /* Models */,
 				83E4323E148B11C500D9371E /* libs */,
@@ -361,6 +374,7 @@
 				8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */,
 				83E43246148B2B0E00D9371E /* HooplaTableViewController.m in Sources */,
 				8353B8B4148B4DC500AA0141 /* Recommendation.m in Sources */,
+				8332AE17148B6D6D00067005 /* RecommendationTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

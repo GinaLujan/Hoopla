@@ -1,58 +1,57 @@
 {
-  results:"ok",
-  response_message:"",
-  data: [
+  "results":"ok",
+  "response_message":"",
+  "data":
     {
-      recommendations:[
+      "recommendations":[
         {
-          id:12345,
-          category:"Food",
-          type:"Mexican",
-          title:"Flamingo's Cafe",
-          subtitle:"",
-          description:"",
-          address:"122 Inola", 
-          city:"Lancaster", 
-          state:"CA",
-          zip:"91452",
-          latitude:"-129.00",
-          longitude:"22.123",
-          starts_at:"12-01-12 9:00",
-          rating:4.5         
+          "id":12345,
+          "category":"Food",
+          "type":"Mexican",
+          "title":"Flamingo's Cafe",
+          "subtitle":"",
+          "description":"",
+          "address":"122 Inola", 
+          "city":"Lancaster", 
+          "state":"CA",
+          "zip":"91452",
+          "latitude":"-129.00",
+          "longitude":"22.123",
+          "starts_at":"12-01-12 9:00",
+          "rating":4.5         
           },
           
           {
-            id:12346,
-            category:"Entertainment",
-            type:"Movie",
-            title:"Paranormal Activity", 
-            subtitle:"@The Metreon",
-            address:"122 Inola", 
-            city:"Lancaster", 
-            state:"CA",
-            zip:"91452",
-            latitude:"-129.00",
-            longitude:"22.123",
-            starts_at:"12-01-12 9:00",
-            rating:5          
+            "id":12346,
+            "category":"Entertainment",
+            "type":"Movie",
+            "title":"Paranormal Activity", 
+            "subtitle":"@The Metreon",
+            "address":"122 Inola", 
+            "city":"Lancaster", 
+            "state":"CA",
+            "zip":"91452",
+            "latitude":"-129.00",
+            "longitude":"22.123",
+            "starts_at":"12-01-12 9:00",
+            "rating":5          
             },
             
             {
-              id:12347,
-              category:"Food",
-              type:"American",
-              title:"Jose's Cafe", 
-              subtitle:"",
-              address:"122 Inola", 
-              city:"Lancaster", 
-              state:"CA",
-              zip:"91452",
-              latitude:"-129.00",
-              longitude:"22.123",
-              starts_at:"12-01-12 9:00",
-              rating:3        
-              }
+              "id":12347,
+              "category":"Food",
+              "type":"American",
+              "title":"Jose's Cafe", 
+              "subtitle":"",
+              "address":"122 Inola", 
+              "city":"Lancaster", 
+              "state":"CA",
+              "zip":"91452",
+              "latitude":"-129.00",
+              "longitude":"22.123",
+              "starts_at":"12-01-12 9:00",
+              "rating":3        
+              },
       ]
     }
-  ]
 }

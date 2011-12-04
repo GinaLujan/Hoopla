@@ -12,4 +12,7 @@
 
 @property (nonatomic, strong) NSArray *results;
 
+
+- (void)fetchedData:(NSData *)responseData;
+
 @end

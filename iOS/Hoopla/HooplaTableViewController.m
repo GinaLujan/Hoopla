@@ -7,6 +7,9 @@
 //
 
 #import "HooplaTableViewController.h"
+#import "RecommendationTableViewCell.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 
 @implementation HooplaTableViewController
@@ -41,10 +44,28 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
+    self.tableView.rowHeight = 45;
+    
+    self.navigationController.navigationBar. layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.navigationController.navigationBar.layer.shadowRadius = 3.0f;
+    self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
+    self.navigationController.navigationBar.layer.masksToBounds = NO;
 }
 
-- (void)viewWillAppear
+- (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Recommendations" 
+                                                     ofType:@"json"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    //    NSString *content = [NSString stringWithContentsOfFile:path
+    //                                                  encoding:NSUTF8StringEncoding
+    //                                                     error:NULL];
+    
+    NSLog(@"%@", data);
+    [self fetchedData:data];
 }
 
 - (void)viewDidUnload
@@ -52,11 +73,6 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -85,18 +101,26 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [_results count];
+    //return [_results count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    return [_results count];
     // Return the number of rows in the section.
-    return [[_results objectAtIndex:section] count];
+    //return [[_results objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationsCell"];
+    RecommendationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationCell"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tablecellbg"]];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 45)];
+    [bgView addSubview:imageView];
+    cell.backgroundView = bgView;
+    Recommendation *recommendation = [_results objectAtIndex:[indexPath row]];
+    cell.titleLabel.text = recommendation.title;
     
     return cell;
 }
@@ -151,6 +175,25 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)fetchedData:(NSData *)responseData {
+    //parse out the json data
+    
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization 
+                          JSONObjectWithData:responseData //1
+                          
+                          options:kNilOptions 
+                          error:&error];
+    
+    NSArray *recommendations = [json valueForKeyPath:@"data.recommendations"]; //2
+    
+    NSLog(@"recos: %i", [recommendations count]); //3
+    
+    self.results = [Recommendation recommendationsFromArray:recommendations];
+    NSLog(@"%i", [_results count]);
+    [self.tableView reloadData];
 }
 
 @end
