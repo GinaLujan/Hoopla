@@ -14,12 +14,17 @@
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, copy) NSString *description;
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *city;
 @property (nonatomic, copy) NSString *state;
 @property (nonatomic, copy) NSString *zip;
+@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, strong) NSDate  *startsAt;
+@property (nonatomic, strong) NSNumber *rating;
+
 
 + (NSArray *)recommendationsFromArray:(NSArray *)array;
 

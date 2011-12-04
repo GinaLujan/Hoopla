@@ -9,13 +9,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Hoopla/AppDelegate.m"
-         timestampString = "344672774.844658"
+         timestampString = "344679494.93211"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
-         landmarkName = "-setCurrentLocation:"
-         landmarkType = "5">
+         startingLineNumber = "86"
+         endingLineNumber = "86"
+         landmarkName = "@implementation AppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

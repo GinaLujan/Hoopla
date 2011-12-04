@@ -14,12 +14,16 @@
 @synthesize category = _category;
 @synthesize type = _type;
 @synthesize title = _title;
+@synthesize subtitle = _subtitle;
 @synthesize description = _description;
 @synthesize address = _address;
 @synthesize city = _city;
 @synthesize state = _state;
 @synthesize zip = _zip;
+@synthesize latitude = _latitude;
+@synthesize longitude = _longitude;
 @synthesize startsAt = _startsAt;
+@synthesize rating = _rating;
 
 + (NSArray *)recommendationsFromArray:(NSArray *)array {
     NSMutableArray *results = [NSMutableArray arrayWithCapacity:[array count]];
@@ -35,14 +39,18 @@
     recommendation.category = [dict valueForKeyPath:@"category"];
     recommendation.type = [dict valueForKeyPath:@"type"];
     recommendation.title = [dict valueForKeyPath:@"title"];
+    recommendation.subtitle = [dict valueForKeyPath:@"subtitle"];
     recommendation.description = [dict valueForKeyPath:@"description"];
     recommendation.address = [dict valueForKeyPath:@"address"];
     recommendation.city = [dict valueForKeyPath:@"city"];
     recommendation.state = [dict valueForKeyPath:@"state"];
     recommendation.zip = [dict valueForKeyPath:@"zip"];
+    recommendation.latitude = [dict valueForKey:@"latitude"];
+    recommendation.longitude = [dict valueForKey:@"longitude"];
 #warning This needs to be fixed
     recommendation.startsAt = [NSDate date];
+    recommendation.rating = [dict valueForKey:@"rating"];
     
-    
+    return recommendation;
 }
 @end
