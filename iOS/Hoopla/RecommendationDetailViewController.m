@@ -120,7 +120,8 @@
 }
 
 - (IBAction)directions:(id)sender {
-    NSString *routeString = [NSString stringWithFormat:@"http://maps.google.com/maps?ll=%g,%g", _recommendation.coordinate.latitude, _recommendation.coordinate.longitude];
+    NSString *routeString = [NSString stringWithFormat:@"http://maps.google.com/maps?q=%g,%g", _recommendation.coordinate.latitude, _recommendation.coordinate.longitude];
+    NSLog(@"Google URL: %@", routeString);
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:routeString]];
 }
 
