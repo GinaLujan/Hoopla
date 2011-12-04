@@ -61,25 +61,19 @@
     if (self.recommendation) {
         self.titleLabel.text = _recommendation.title;
         self.subtitleLabel.text = _recommendation.subtitle;
+        
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        MKCoordinateRegion newRegion;
+        newRegion.center = appDelegate.currentLocation;
+        newRegion.span.latitudeDelta = 0.002; 
+        newRegion.span.longitudeDelta = 0.002;
+        self.mapView.region = newRegion;
+        [self.mapView setCenterCoordinate:_recommendation.location.coordinate];
+        [self.mapView addAnnotation:_recommendation];
+        
     }
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    MKCoordinateRegion newRegion;
-    newRegion.center = appDelegate.currentLocation;
-    newRegion.span.latitudeDelta = 0.002; 
-    newRegion.span.longitudeDelta = 0.002;
-    self.mapView.region = newRegion;
-    [self.mapView setCenterCoordinate:_recommendation.location.coordinate];
-    [self.mapView addAnnotation:_recommendation];
-    
-    _pointAnnotation = [[MKPointAnnotation alloc] init];
-//    self.pointAnnotation.title = _recommendation.title;
-//    self.pointAnnotation.subtitle = _recommendation.subtitle;    
-//    self.pointAnnotation.coordinate = _recommendation.location.coordinate;
-//    
-//    [self.mapView addAnnotation:self.pointAnnotation];
-    
-    [self.mapView selectAnnotation:self.pointAnnotation animated:NO];
 }
 
 - (void)viewDidUnload
@@ -102,7 +96,7 @@
     
     static NSString *identifier = @"Recommendation";   
     if ([annotation isKindOfClass:[Recommendation class]]) {
-        Recommendation *recommendation = (Recommendation *) annotation;
+        //Recommendation *recommendation = (Recommendation *) annotation;
         
         MKPinAnnotationView *annotationView = (MKPinAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (annotationView == nil) {
@@ -117,6 +111,8 @@
         UIButton *detailDisclosure = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         [detailDisclosure addTarget:self action:@selector(directions:) forControlEvents:UIControlEventTouchUpInside];
         annotationView.rightCalloutAccessoryView = detailDisclosure;
+        [mapView selectAnnotation:annotation animated:YES];
+
         return annotationView;
     }
     

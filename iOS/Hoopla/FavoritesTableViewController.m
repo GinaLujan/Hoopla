@@ -1,27 +1,25 @@
 //
-//  HooplaTableViewController.m
+//  FavoritesTableViewController.m
 //  Hoopla
 //
-//  Created by Chris Bruce on 12/3/11.
+//  Created by Chris Bruce on 12/4/11.
 //  Copyright (c) 2011 Diversion, Inc. All rights reserved.
 //
 
-#import "HooplaTableViewController.h"
-
+#import "FavoritesTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FavoriteTableViewCell.h"
 
 
-@implementation HooplaTableViewController
-@synthesize results = _results;
+@implementation FavoritesTableViewController
 @synthesize sections = _sections;
-@synthesize favTapGestureRecognizer = _favTapGestureRecognizer;
+@synthesize results = _results;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.results = [NSMutableArray array];
-        self.sections = [NSMutableArray array];
+        // Custom initialization
     }
     return self;
 }
@@ -45,8 +43,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
-    self.tableView.rowHeight = 45;
     
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
@@ -55,22 +51,22 @@
     self.navigationController.navigationBar.layer.masksToBounds = NO;
 }
 
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Recommendations" 
                                                      ofType:@"json"];
     
     NSData *data = [NSData dataWithContentsOfFile:path];
     [self fetchedData:data];
-}
-
-- (void)viewDidUnload
-{
-    [self setFavTapGestureRecognizer:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -88,12 +84,6 @@
     [super viewDidDisappear:animated];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Assume self.view is the table view
@@ -102,6 +92,12 @@
         Recommendation *recommendation = [[_results objectAtIndex:[path section]] objectAtIndex:[path row]];
         [segue.destinationViewController setRecommendation:recommendation];
     }
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
@@ -114,12 +110,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // Return the number of rows in the section.
     return [[_results objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RecommendationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationCell"];
+    FavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavoriteTableViewCell"];
     
     NSArray *recsInSection = [_results objectAtIndex:[indexPath section]];
     
@@ -210,7 +207,7 @@
                           JSONObjectWithData:responseData
                           options:kNilOptions 
                           error:&error];
-    NSArray *rawArray = [json valueForKeyPath:@"data.recommendations"];
+    NSArray *rawArray = [json valueForKeyPath:@"data.favorites"];
     
     NSLog(@"Response: %@ - %i", rawArray, [rawArray count]);
     
@@ -234,8 +231,5 @@
     [self.tableView reloadData];
 }
 
-- (void)favoriteToggled:(BOOL)isSelected {
-    
-}
 
 @end

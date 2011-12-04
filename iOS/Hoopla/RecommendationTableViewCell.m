@@ -12,6 +12,7 @@
 @synthesize titleLabel;
 @synthesize subtitleLabel;
 @synthesize favoriteImageView;
+@synthesize delegate;
 
 @synthesize recommendation = _recommendation;
 
@@ -30,6 +31,9 @@
     bgView.backgroundColor = UI_COLOR_PRIMARY;
     [bgView addSubview:imageView];
     self.backgroundView = bgView;
+    
+    _favTapGestrure = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteTapped:)];
+    [self.favoriteImageView addGestureRecognizer:_favTapGestrure];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -46,11 +50,38 @@
         self.titleLabel.text = recommendation.title;
         self.subtitleLabel.text = [NSString stringWithFormat:@"%@ %@", recommendation.type, recommendation.subtitle];
         
-        if (recommendation.isFavorite) {
-            self.favoriteImageView.image = [UIImage imageNamed:@"suggestionstar-selected"];
-        } else {
+        [self toggleStar:recommendation.isFavorite];
+        
+    }
+}
+
+- (IBAction)favoriteTapped:(id)sender {
+    NSLog(@"Tapped");
+    [self toggleStar:!_isStarred];
+    [delegate favoriteToggled:_isStarred];
+}
+
+- (void)toggleStar:(BOOL)isSelected {
+    _isStarred = isSelected;
+    if (isSelected) {
+        self.favoriteImageView.image = [UIImage imageNamed:@"suggestionstar-selected"];
+        [UIView animateWithDuration:0.15 animations:^{
+            favoriteImageView.transform = CGAffineTransformMakeScale(1.4, 1.4);
+        } completion: ^(BOOL finished) {
+            [UIView animateWithDuration:0.15 animations:^{
+                favoriteImageView.transform = CGAffineTransformMakeScale(1, 1);
+            }];
+        }];
+    } else {
+        [UIView animateWithDuration:0.15 animations:^{
+            favoriteImageView.transform = CGAffineTransformMakeScale(.6, .6);
+        } completion: ^(BOOL finished) {
+            [UIView animateWithDuration:0.15 animations:^{
+                favoriteImageView.transform = CGAffineTransformMakeScale(1, 1);
+            }];
             self.favoriteImageView.image = [UIImage imageNamed:@"suggestionstar-unselected"];
-        }
+        }];
+        
     }
 }
 

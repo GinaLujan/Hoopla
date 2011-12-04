@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecommendationTableViewCell.h"
 
-@interface HooplaTableViewController : UITableViewController
+@interface HooplaTableViewController : UITableViewController <FavoriteToggledDelegate>
 
 @property (nonatomic, strong) NSMutableArray *results;
 @property (nonatomic, strong) NSMutableArray *sections;
 
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *favTapGestureRecognizer;
 
 - (void)fetchedData:(NSData *)responseData;
 
