@@ -61,6 +61,7 @@
 		8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HooplaTests.m; sourceTree = "<group>"; };
 		8387ECDE148B04C200D6C3BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83E43240148B16D500D9371E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +125,7 @@
 		8387EC9F148AFFAA00D6C3BF /* Hoopla */ = {
 			isa = PBXGroup;
 			children = (
+				83E4323E148B11C500D9371E /* libs */,
 				8387ECD9148B028800D6C3BF /* Managers */,
 				8387ECA8148AFFAA00D6C3BF /* AppDelegate.h */,
 				8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */,
@@ -140,6 +142,7 @@
 		8387ECA0148AFFAA00D6C3BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83E43240148B16D500D9371E /* Constants.h */,
 				8387ECA1148AFFAA00D6C3BF /* Hoopla-Info.plist */,
 				8387ECA2148AFFAA00D6C3BF /* InfoPlist.strings */,
 				8387ECA5148AFFAA00D6C3BF /* main.m */,
@@ -172,6 +175,13 @@
 			children = (
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		83E4323E148B11C500D9371E /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +466,7 @@
 				8387ECD5148AFFAA00D6C3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8387ECD6148AFFAA00D6C3BF /* Build configuration list for PBXNativeTarget "HooplaTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +475,7 @@
 				8387ECD8148AFFAA00D6C3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
