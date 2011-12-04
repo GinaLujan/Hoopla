@@ -16,8 +16,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rds-ac-vBc" kind="relationship" relationship="viewControllers" id="7AO-Bb-UA0"/>
                         <segue destination="u4h-1Z-1nt" kind="relationship" relationship="viewControllers" id="x3r-p6-OfE"/>
+                        <segue destination="rds-ac-vBc" kind="relationship" relationship="viewControllers" id="7AO-Bb-UA0"/>
                         <segue destination="9HS-UE-bLe" kind="relationship" relationship="viewControllers" id="Hia-DW-L49"/>
                     </connections>
                 </tabBarController>
@@ -57,7 +57,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK2-Jj-ZON" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="rds-ac-vBc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recommendations" id="twL-bA-0RG"/>
+                    <tabBarItem key="tabBarItem" title="Hoopla" id="twL-bA-0RG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="EXB-Bb-tOo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

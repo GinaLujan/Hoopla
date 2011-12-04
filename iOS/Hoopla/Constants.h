@@ -6,5 +6,8 @@
 //  Copyright (c) 2011 Diversion, Inc. All rights reserved.
 //
 
-#define API_URL @"api-hoopla.heroku.com"
+#define API_URL @"http://api-hoopla.heroku.com/"
+
+
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
