@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83206966148BC5FC00BA2A1B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83206963148BC5FC00BA2A1B /* Icon.png */; };
+		83206967148BC5FC00BA2A1B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83206964148BC5FC00BA2A1B /* Icon@2x.png */; };
+		83206968148BC5FC00BA2A1B /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 83206965148BC5FC00BA2A1B /* iTunesArtwork */; };
 		8332AE17148B6D6D00067005 /* RecommendationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8332AE16148B6D6D00067005 /* RecommendationTableViewCell.m */; };
 		835162C7148B6416001357FE /* tablecellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 835162C5148B6416001357FE /* tablecellbg.png */; };
 		835162C8148B6416001357FE /* tablecellbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 835162C6148B6416001357FE /* tablecellbg@2x.png */; };
 		8353B8B0148B4C7A00AA0141 /* tabbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8353B8AF148B4C7A00AA0141 /* tabbarbg.png */; };
 		8353B8B4148B4DC500AA0141 /* Recommendation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8353B8B3148B4DC500AA0141 /* Recommendation.m */; };
+		836DC3F4148B9E8D009C3468 /* tabicon-hoopla.png in Resources */ = {isa = PBXBuildFile; fileRef = 836DC3F2148B9E8D009C3468 /* tabicon-hoopla.png */; };
+		836DC3F5148B9E8D009C3468 /* tabicon-hoopla@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836DC3F3148B9E8D009C3468 /* tabicon-hoopla@2x.png */; };
+		836DC3F9148B9F6F009C3468 /* tabicon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 836DC3F7148B9F6F009C3468 /* tabicon-info.png */; };
+		836DC3FA148B9F6F009C3468 /* tabicon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836DC3F8148B9F6F009C3468 /* tabicon-info@2x.png */; };
 		836E5E75148B952600E13EEE /* ROCKB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E74148B952600E13EEE /* ROCKB.TTF */; };
 		836E5E78148B96BD00E13EEE /* tabicon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E76148B96BD00E13EEE /* tabicon-star.png */; };
 		836E5E79148B96BD00E13EEE /* tabicon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E77148B96BD00E13EEE /* tabicon-star@2x.png */; };
@@ -40,6 +47,9 @@
 		83E43249148B310500D9371E /* Recommendations.json in Resources */ = {isa = PBXBuildFile; fileRef = 83E43248148B310500D9371E /* Recommendations.json */; };
 		83E43251148B42FF00D9371E /* logo-header.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E4324F148B42FF00D9371E /* logo-header.png */; };
 		83E43252148B42FF00D9371E /* logo-header@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E43250148B42FF00D9371E /* logo-header@2x.png */; };
+		83F2F009148BA21B003C3E6D /* BigButtonUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F2F008148BA21B003C3E6D /* BigButtonUITabBarController.m */; };
+		83F2F00D148BA987003C3E6D /* RecommendationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F2F00C148BA987003C3E6D /* RecommendationDetailViewController.m */; };
+		83F2F013148BAE87003C3E6D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F2F012148BAE87003C3E6D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83206963148BC5FC00BA2A1B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		83206964148BC5FC00BA2A1B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		83206965148BC5FC00BA2A1B /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		8332AE15148B6D6D00067005 /* RecommendationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendationTableViewCell.h; sourceTree = "<group>"; };
 		8332AE16148B6D6D00067005 /* RecommendationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendationTableViewCell.m; sourceTree = "<group>"; };
 		835162C5148B6416001357FE /* tablecellbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tablecellbg.png; sourceTree = "<group>"; };
@@ -60,6 +73,10 @@
 		8353B8AF148B4C7A00AA0141 /* tabbarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbg.png; sourceTree = "<group>"; };
 		8353B8B2148B4DC500AA0141 /* Recommendation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommendation.h; sourceTree = "<group>"; };
 		8353B8B3148B4DC500AA0141 /* Recommendation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommendation.m; sourceTree = "<group>"; };
+		836DC3F2148B9E8D009C3468 /* tabicon-hoopla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-hoopla.png"; sourceTree = "<group>"; };
+		836DC3F3148B9E8D009C3468 /* tabicon-hoopla@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-hoopla@2x.png"; sourceTree = "<group>"; };
+		836DC3F7148B9F6F009C3468 /* tabicon-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-info.png"; sourceTree = "<group>"; };
+		836DC3F8148B9F6F009C3468 /* tabicon-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-info@2x.png"; sourceTree = "<group>"; };
 		836E5E74148B952600E13EEE /* ROCKB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROCKB.TTF; sourceTree = "<group>"; };
 		836E5E76148B96BD00E13EEE /* tabicon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-star.png"; sourceTree = "<group>"; };
 		836E5E77148B96BD00E13EEE /* tabicon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-star@2x.png"; sourceTree = "<group>"; };
@@ -95,6 +112,11 @@
 		83E43248148B310500D9371E /* Recommendations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Recommendations.json; sourceTree = "<group>"; };
 		83E4324F148B42FF00D9371E /* logo-header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-header.png"; sourceTree = "<group>"; };
 		83E43250148B42FF00D9371E /* logo-header@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-header@2x.png"; sourceTree = "<group>"; };
+		83F2F007148BA21B003C3E6D /* BigButtonUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigButtonUITabBarController.h; sourceTree = "<group>"; };
+		83F2F008148BA21B003C3E6D /* BigButtonUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigButtonUITabBarController.m; sourceTree = "<group>"; };
+		83F2F00B148BA987003C3E6D /* RecommendationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendationDetailViewController.h; sourceTree = "<group>"; };
+		83F2F00C148BA987003C3E6D /* RecommendationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendationDetailViewController.m; sourceTree = "<group>"; };
+		83F2F012148BAE87003C3E6D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8387ECE1148B04EC00D6C3BF /* QuartzCore.framework in Frameworks */,
+				83F2F013148BAE87003C3E6D /* MapKit.framework in Frameworks */,
 				8387ECDF148B04C200D6C3BF /* CoreLocation.framework in Frameworks */,
+				8387ECE1148B04EC00D6C3BF /* QuartzCore.framework in Frameworks */,
 				8387EC9A148AFFAA00D6C3BF /* UIKit.framework in Frameworks */,
 				8387EC9C148AFFAA00D6C3BF /* Foundation.framework in Frameworks */,
 				8387EC9E148AFFAA00D6C3BF /* CoreGraphics.framework in Frameworks */,
@@ -162,6 +185,7 @@
 		8387EC98148AFFAA00D6C3BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83F2F012148BAE87003C3E6D /* MapKit.framework */,
 				8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */,
 				8387ECDE148B04C200D6C3BF /* CoreLocation.framework */,
 				8387EC99148AFFAA00D6C3BF /* UIKit.framework */,
@@ -250,6 +274,10 @@
 			children = (
 				83E43244148B2B0E00D9371E /* HooplaTableViewController.h */,
 				83E43245148B2B0E00D9371E /* HooplaTableViewController.m */,
+				83F2F007148BA21B003C3E6D /* BigButtonUITabBarController.h */,
+				83F2F008148BA21B003C3E6D /* BigButtonUITabBarController.m */,
+				83F2F00B148BA987003C3E6D /* RecommendationDetailViewController.h */,
+				83F2F00C148BA987003C3E6D /* RecommendationDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -273,6 +301,13 @@
 		83E4324E148B42ED00D9371E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				83206963148BC5FC00BA2A1B /* Icon.png */,
+				83206964148BC5FC00BA2A1B /* Icon@2x.png */,
+				83206965148BC5FC00BA2A1B /* iTunesArtwork */,
+				836DC3F7148B9F6F009C3468 /* tabicon-info.png */,
+				836DC3F8148B9F6F009C3468 /* tabicon-info@2x.png */,
+				836DC3F2148B9E8D009C3468 /* tabicon-hoopla.png */,
+				836DC3F3148B9E8D009C3468 /* tabicon-hoopla@2x.png */,
 				836E5E7A148B971800E13EEE /* suggestionstar-selected.png */,
 				836E5E7B148B971800E13EEE /* suggestionstar-selected@2x.png */,
 				836E5E7C148B971800E13EEE /* suggestionstar-unselected.png */,
@@ -380,6 +415,13 @@
 				836E5E7F148B971800E13EEE /* suggestionstar-selected@2x.png in Resources */,
 				836E5E80148B971800E13EEE /* suggestionstar-unselected.png in Resources */,
 				836E5E81148B971800E13EEE /* suggestionstar-unselected@2x.png in Resources */,
+				836DC3F4148B9E8D009C3468 /* tabicon-hoopla.png in Resources */,
+				836DC3F5148B9E8D009C3468 /* tabicon-hoopla@2x.png in Resources */,
+				836DC3F9148B9F6F009C3468 /* tabicon-info.png in Resources */,
+				836DC3FA148B9F6F009C3468 /* tabicon-info@2x.png in Resources */,
+				83206966148BC5FC00BA2A1B /* Icon.png in Resources */,
+				83206967148BC5FC00BA2A1B /* Icon@2x.png in Resources */,
+				83206968148BC5FC00BA2A1B /* iTunesArtwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +461,8 @@
 				83E43246148B2B0E00D9371E /* HooplaTableViewController.m in Sources */,
 				8353B8B4148B4DC500AA0141 /* Recommendation.m in Sources */,
 				8332AE17148B6D6D00067005 /* RecommendationTableViewCell.m in Sources */,
+				83F2F009148BA21B003C3E6D /* BigButtonUITabBarController.m in Sources */,
+				83F2F00D148BA987003C3E6D /* RecommendationDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +563,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hoopla/Hoopla-Prefix.pch";
 				INFOPLIST_FILE = "Hoopla/Hoopla-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -530,6 +575,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hoopla/Hoopla-Prefix.pch";
 				INFOPLIST_FILE = "Hoopla/Hoopla-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

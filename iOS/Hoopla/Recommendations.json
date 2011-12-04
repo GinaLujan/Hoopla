@@ -15,8 +15,8 @@
           "city":"Lancaster", 
           "state":"CA",
           "zip":"91452",
-          "latitude":"-129.00",
-          "longitude":"22.123",
+          "longitude":"-122.031",
+          "latitude":"37.3324",
           "starts_at":"12-01-12 9:00",
           "rating":4.5,
           "is_favorite":true        
@@ -32,8 +32,8 @@
             "city":"Lancaster", 
             "state":"CA",
             "zip":"91452",
-            "latitude":"-129.00",
-            "longitude":"22.123",
+            "longitude":"-122.031",
+            "latitude":"37.3324",
             "starts_at":"12-01-12 9:00",
             "rating":5,
             "is_favorite":false         
@@ -49,8 +49,8 @@
               "city":"Lancaster", 
               "state":"CA",
               "zip":"91452",
-              "latitude":"-129.00",
-              "longitude":"22.123",
+              "longitude":"-122.031",
+              "latitude":"37.3324",
               "starts_at":"12-01-12 9:00",
               "rating":3,
               "is_favorite":false       

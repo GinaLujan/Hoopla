@@ -71,7 +71,16 @@
     return recommendation;
 }
 
+- (CLLocation *)location {
+    return [[CLLocation alloc] initWithLatitude:[self.latitude doubleValue] longitude:[self.longitude doubleValue]];
+}
+
+- (CLLocationCoordinate2D)coordinate {
+    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+}
+
 - (NSString *)description {
     return self.title;
 }
+
 @end

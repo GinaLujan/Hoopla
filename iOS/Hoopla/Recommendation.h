@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <Mapkit/Mapkit.h>
 
-@interface Recommendation : NSObject
+@interface Recommendation : NSObject <MKAnnotation>
 
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *category;
@@ -22,6 +24,7 @@
 @property (nonatomic, copy) NSString *zip;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
+@property (readonly) CLLocation *location;
 @property (nonatomic, strong) NSDate  *startsAt;
 @property (nonatomic, strong) NSNumber *rating;
 @property (nonatomic) BOOL isFavorite;

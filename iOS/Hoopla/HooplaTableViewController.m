@@ -93,6 +93,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Assume self.view is the table view
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    Recommendation *recommendation = [[_results objectAtIndex:[path section]] objectAtIndex:[path row]];
+    [segue.destinationViewController setRecommendation:recommendation];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -121,16 +129,17 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.sectionHeaderHeight)];
     sectionView.opaque = NO;
-    sectionView.backgroundColor = UI_COLOR_BG;
+    sectionView.backgroundColor = UI_COLOR_SECTION_BG;
     
     sectionView.layer.shadowColor = [[UIColor blackColor] CGColor];
     sectionView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     sectionView.layer.shadowRadius = 4.0f;
-    sectionView.layer.shadowOpacity = 0.5f;
+    sectionView.layer.shadowOpacity = 1.0f;
     sectionView.layer.masksToBounds = NO;
     
     UILabel *sectionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, sectionView.frame.size.width - 10, sectionView.frame.size.height)];
     sectionLabel.font = [UIFont boldSystemFontOfSize:16];
+    sectionLabel.textColor = [UIColor blackColor];
     sectionLabel.backgroundColor = [UIColor clearColor];
     sectionLabel.text = [_sections objectAtIndex:section];
     [sectionView addSubview:sectionLabel];

@@ -44,7 +44,7 @@
         _recommendation = recommendation;
         
         self.titleLabel.text = recommendation.title;
-        self.subtitleLabel.text = recommendation.subtitle;
+        self.subtitleLabel.text = [NSString stringWithFormat:@"%@ %@", recommendation.type, recommendation.subtitle];
         
         if (recommendation.isFavorite) {
             self.favoriteImageView.image = [UIImage imageNamed:@"suggestionstar-selected"];
