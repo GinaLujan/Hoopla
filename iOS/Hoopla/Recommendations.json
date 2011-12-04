@@ -7,9 +7,9 @@
         {
           "id":"12345",
           "category":"Food",
-          "type":"Mexican",
-          "title":"Flamingo's Cafe",
-          "subtitle":"",
+          "type":"",
+          "title":"Mexican Food",
+          "subtitle":"@Flamingo's Cafe",
           "description":"",
           "address":"122 Inola", 
           "city":"Lancaster", 
@@ -24,7 +24,7 @@
           
           {
             "id":"12346",
-            "category":"Entertainment",
+            "category":"Movies",
             "type":"Movie",
             "title":"Paranormal Activity", 
             "subtitle":"@The Metreon",
@@ -42,9 +42,9 @@
             {
               "id":"12347",
               "category":"Food",
-              "type":"American",
-              "title":"Jose's Cafe", 
-              "subtitle":"",
+              "type":"",
+              "title":"American Food", 
+              "subtitle":"@Jose's Cafe",
               "address":"122 Inola", 
               "city":"Lancaster", 
               "state":"CA",
@@ -55,15 +55,125 @@
               "rating":3,
               "is_favorite":false       
               },
+              
+              {
+                "id":"12345",
+                "category":"Events",
+                "type":"",
+                "title":"Alameda Fair",
+                "subtitle":"@Alemda Fairgrounds",
+                "description":"",
+                "address":"122 Inola", 
+                "city":"Lancaster", 
+                "state":"CA",
+                "zip":"91452",
+                "longitude":"-122.031",
+                "latitude":"37.3324",
+                "starts_at":"12-01-12 9:00",
+                "rating":4.5,
+                "is_favorite":true        
+                },
+                
+                {
+                  "id":"12345",
+                  "category":"Events",
+                  "type":"",
+                  "title":"Giants -vs- Dodgers",
+                  "subtitle":"@Giant's Statium",
+                  "description":"",
+                  "address":"122 Inola", 
+                  "city":"Lancaster", 
+                  "state":"CA",
+                  "zip":"91452",
+                  "longitude":"-122.031",
+                  "latitude":"37.3324",
+                  "starts_at":"12-01-12 9:00",
+                  "rating":4.5,
+                  "is_favorite":true        
+                  },
+                  
+                  {
+                    "id":"12345",
+                    "category":"Live Music",
+                    "type":"",
+                    "title":"Skillex",
+                    "subtitle":"@The Warfield",
+                    "description":"",
+                    "address":"122 Inola", 
+                    "city":"Lancaster", 
+                    "state":"CA",
+                    "zip":"91452",
+                    "longitude":"-122.031",
+                    "latitude":"37.3324",
+                    "starts_at":"12-01-12 9:00",
+                    "rating":4.5,
+                    "is_favorite":true        
+                    },
+                    
+                    {
+                      "id":"12345",
+                      "category":"Live Music",
+                      "type":"",
+                      "title":"The Dwarves",
+                      "subtitle":"@Slims",
+                      "description":"",
+                      "address":"122 Inola", 
+                      "city":"Lancaster", 
+                      "state":"CA",
+                      "zip":"91452",
+                      "longitude":"-122.031",
+                      "latitude":"37.3324",
+                      "starts_at":"12-01-12 9:00",
+                      "rating":4.5,
+                      "is_favorite":true        
+                      },
+                      
+                      
+
+                      {
+                      "id":"12345",
+                      "category":"Activities",
+                      "type":"",
+                      "title":"Sushi Chef Class",
+                      "subtitle":"@Tokyo Fish",
+                      "description":"",
+                      "address":"122 Inola", 
+                      "city":"Lancaster", 
+                      "state":"CA",
+                      "zip":"91452",
+                      "longitude":"-122.031",
+                      "latitude":"37.3324",
+                      "starts_at":"12-01-12 9:00",
+                      "rating":4.5,
+                      "is_favorite":true        
+                      },
+                      
+                      {
+                      "id":"12345",
+                      "category":"Activities",
+                      "type":"",
+                      "title":"Indoor Rock Climbing",
+                      "subtitle":"@Iron Works Gym",
+                      "description":"",
+                      "address":"122 Inola", 
+                      "city":"Lancaster", 
+                      "state":"CA",
+                      "zip":"91452",
+                      "longitude":"-122.031",
+                      "latitude":"37.3324",
+                      "starts_at":"12-01-12 9:00",
+                      "rating":4.5,
+                      "is_favorite":true        
+                      },
       ],
       
       "favorites":[
         {
           "id":"12345",
           "category":"Food",
-          "type":"Mexican",
-          "title":"Flaco's Tacos",
-          "subtitle":"",
+          "type":"",
+          "title":"Mexican Food",
+          "subtitle":"@Flaco's Tacos",
           "description":"",
           "address":"122 Inola", 
           "city":"Lancaster", 
@@ -96,9 +206,9 @@
             {
               "id":"12347",
               "category":"Food",
-              "type":"American",
-              "title":"Jose's Cafe", 
-              "subtitle":"",
+              "type":"",
+              "title":"American Food", 
+              "subtitle":"Jose's Cafe",
               "address":"122 Inola", 
               "city":"Lancaster", 
               "state":"CA",
@@ -108,7 +218,7 @@
               "starts_at":"12-01-12 9:00",
               "rating":3,
               "is_favorite":true       
-              },
+              }
       ]
     }
 }

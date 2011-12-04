@@ -21,5 +21,6 @@
 
 - (void)fetchedData:(NSData *)responseData;
 - (NSIndexPath *)indexPathForRecommendation:(Recommendation *)recommendation;
+- (NSIndexPath *)indexPathForModels:(NSIndexPath *)indexPath;
 
 @end

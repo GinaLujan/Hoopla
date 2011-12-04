@@ -49,6 +49,8 @@
     self.navigationController.navigationBar.layer.shadowRadius = 3.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     self.navigationController.navigationBar.layer.masksToBounds = NO;
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 15, 0);
 }
 
 - (void)viewDidUnload

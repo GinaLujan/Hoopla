@@ -58,6 +58,7 @@
     
     //LoadingView *loading = [[LoadingView alloc] init];
     //[self.view addSubview:loading];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 15, 0);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -103,12 +104,8 @@
 {
     // Assume self.view is the table view
     if ([segue.identifier isEqualToString:@"RecommendationDetailSegue"]) {
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        NSInteger row = path.row;
-        if ([path isEqual:self.controlIndexPath]) {
-            row--;
-        }
-        Recommendation *recommendation = [[_results objectAtIndex:path.section] objectAtIndex:row];
+        NSIndexPath *path = [self indexPathForModels:[self.tableView indexPathForSelectedRow]];
+        Recommendation *recommendation = [[_results objectAtIndex:path.section] objectAtIndex:path.row];
         [segue.destinationViewController setRecommendation:recommendation];
     }
 }
@@ -138,9 +135,11 @@
     } else {
         RecommendationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationCell"];
         
-        NSArray *recsInSection = [_results objectAtIndex:[indexPath section]];
         
-        Recommendation *recommendation = [recsInSection objectAtIndex:[indexPath row]];
+        NSIndexPath *modelIndexPath = [self indexPathForModels:indexPath];
+        NSArray *recsInSection = [_results objectAtIndex:[modelIndexPath section]];
+        
+        Recommendation *recommendation = [recsInSection objectAtIndex:[modelIndexPath row]];
         cell.recommendation = recommendation;
         cell.delegate = self;
         
@@ -260,7 +259,6 @@
 }
 
 - (void)infoSelected:(Recommendation *)recommendation {
-    NSLog(@"Info Tapped");
     NSIndexPath *indexPath = [self indexPathForRecommendation:recommendation];
     
     NSIndexPath *indexPathToDelete = self.controlIndexPath;
@@ -315,6 +313,19 @@
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowIdx inSection:sectionIdx];
     return indexPath;
+}
+
+- (NSIndexPath *)indexPathForModels:(NSIndexPath *)indexPath {
+    NSInteger row = indexPath.row;
+    NSInteger section = indexPath.section;
+    if (self.controlIndexPath) {
+        if (indexPath.section == self.controlIndexPath.section) {
+            if (indexPath.row >= self.controlIndexPath.row ) {
+                row--;
+            }
+        }
+    }
+    return [NSIndexPath indexPathForRow:row inSection:section];
 }
 
 @end
