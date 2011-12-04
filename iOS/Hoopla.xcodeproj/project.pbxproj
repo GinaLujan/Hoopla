@@ -21,6 +21,8 @@
 		8387ECD0148AFFAA00D6C3BF /* HooplaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */; };
 		8387ECDF148B04C200D6C3BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECDE148B04C200D6C3BF /* CoreLocation.framework */; };
 		8387ECE1148B04EC00D6C3BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */; };
+		83E43246148B2B0E00D9371E /* HooplaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E43245148B2B0E00D9371E /* HooplaTableViewController.m */; };
+		83E43249148B310500D9371E /* Recommendations.json in Resources */ = {isa = PBXBuildFile; fileRef = 83E43248148B310500D9371E /* Recommendations.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		8387ECDE148B04C200D6C3BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83E43240148B16D500D9371E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		83E43244148B2B0E00D9371E /* HooplaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HooplaTableViewController.h; sourceTree = "<group>"; };
+		83E43245148B2B0E00D9371E /* HooplaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HooplaTableViewController.m; sourceTree = "<group>"; };
+		83E43248148B310500D9371E /* Recommendations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Recommendations.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,7 @@
 		8387EC9F148AFFAA00D6C3BF /* Hoopla */ = {
 			isa = PBXGroup;
 			children = (
+				83E43247148B30EA00D9371E /* Data */,
 				83E43243148B262600D9371E /* Storyboards */,
 				83E43242148B261900D9371E /* Controllers */,
 				83E43241148B260D00D9371E /* Models */,
@@ -184,6 +190,8 @@
 		83E43242148B261900D9371E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				83E43244148B2B0E00D9371E /* HooplaTableViewController.h */,
+				83E43245148B2B0E00D9371E /* HooplaTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +202,14 @@
 				8387ECAB148AFFAA00D6C3BF /* MainStoryboard.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		83E43247148B30EA00D9371E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				83E43248148B310500D9371E /* Recommendations.json */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +285,7 @@
 			files = (
 				8387ECA4148AFFAA00D6C3BF /* InfoPlist.strings in Resources */,
 				8387ECAD148AFFAA00D6C3BF /* MainStoryboard.storyboard in Resources */,
+				83E43249148B310500D9371E /* Recommendations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +322,7 @@
 			files = (
 				8387ECA6148AFFAA00D6C3BF /* main.m in Sources */,
 				8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */,
+				83E43246148B2B0E00D9371E /* HooplaTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
