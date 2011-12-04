@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, strong) NSDate  *startsAt;
 @property (nonatomic, strong) NSNumber *rating;
+@property (nonatomic) BOOL isFavorite;
 
 
 + (NSArray *)recommendationsFromArray:(NSArray *)array;

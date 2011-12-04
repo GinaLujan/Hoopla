@@ -48,7 +48,7 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
     self.tableView.rowHeight = 45;
     
-    self.navigationController.navigationBar. layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     self.navigationController.navigationBar.layer.shadowRadius = 3.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
@@ -113,13 +113,29 @@
     NSArray *recsInSection = [_results objectAtIndex:[indexPath section]];
     
     Recommendation *recommendation = [recsInSection objectAtIndex:[indexPath row]];
-    cell.titleLabel.text = recommendation.title;
+    cell.recommendation = recommendation;
     
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [_sections objectAtIndex:section];
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.sectionHeaderHeight)];
+    sectionView.opaque = NO;
+    sectionView.backgroundColor = UI_COLOR_BG;
+    
+    sectionView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    sectionView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    sectionView.layer.shadowRadius = 4.0f;
+    sectionView.layer.shadowOpacity = 0.5f;
+    sectionView.layer.masksToBounds = NO;
+    
+    UILabel *sectionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, sectionView.frame.size.width - 10, sectionView.frame.size.height)];
+    sectionLabel.font = [UIFont boldSystemFontOfSize:16];
+    sectionLabel.backgroundColor = [UIColor clearColor];
+    sectionLabel.text = [_sections objectAtIndex:section];
+    [sectionView addSubview:sectionLabel];
+    
+    return sectionView;
 }
 
 /*

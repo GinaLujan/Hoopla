@@ -28,31 +28,45 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucL-s6-usg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ZbZ-vo-P0U" customClass="HooplaTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="30" sectionFooterHeight="22" id="5sM-eT-0TH">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="34" sectionFooterHeight="22" id="5sM-eT-0TH">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91764712333679199" green="0.81960791349411011" blue="0.65882354974746704" alpha="1" colorSpace="deviceRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecommendationCell" id="8zU-MP-SDc" customClass="RecommendationTableViewCell">
-                                <rect key="frame" x="0.0" y="30" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RecommendationCell" id="8zU-MP-SDc" customClass="RecommendationTableViewCell">
+                                <rect key="frame" x="0.0" y="34" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="fRG-w8-YZe">
-                                            <rect key="frame" x="36" y="5" width="228" height="21"/>
+                                            <rect key="frame" x="52" y="5" width="228" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="hVM-ij-L3S">
+                                            <rect key="frame" x="52" y="22" width="228" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="suggestionstar-unselected.png" id="SJH-cN-RtM">
+                                            <rect key="frame" x="11" y="7" width="30" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.31764706969261169" green="0.15294118225574493" blue="0.17254902422428131" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
+                                    <outlet property="favoriteImageView" destination="SJH-cN-RtM" id="4bI-DL-lgB"/>
+                                    <outlet property="subtitleLabel" destination="hVM-ij-L3S" id="Mcm-dV-hw1"/>
                                     <outlet property="titleLabel" destination="fRG-w8-YZe" id="Ksv-uV-Ddb"/>
+                                    <segue destination="D0P-rf-CyX" kind="push" identifier="DetailViewSegue" id="srL-rr-sR0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,6 +79,20 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1227" y="3"/>
+        </scene>
+        <scene sceneID="Enn-Sz-lot">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBA-be-mZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="D0P-rf-CyX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6iV-no-uRw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MBt-tk-cjv"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1678" y="3"/>
         </scene>
         <scene sceneID="PRX-fb-C4Y">
             <objects>
@@ -189,7 +217,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIm-2R-DHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="u4h-1Z-1nt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="r2w-q9-iVE"/>
+                    <tabBarItem key="tabBarItem" title="Favs" image="tabicon-star.png" id="r2w-q9-iVE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ZCa-M0-DhD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -222,6 +250,10 @@
             <point key="canvasLocation" x="275" y="822"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="suggestionstar-unselected.png" width="30" height="29"/>
+        <image name="tabicon-star.png" width="30" height="29"/>
+    </resources>
     <classes>
         <class className="HooplaTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HooplaTableViewController.h"/>
@@ -229,6 +261,8 @@
         <class className="RecommendationTableViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RecommendationTableViewCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="favoriteImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="subtitleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

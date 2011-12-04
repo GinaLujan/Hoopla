@@ -24,6 +24,7 @@
 @synthesize longitude = _longitude;
 @synthesize startsAt = _startsAt;
 @synthesize rating = _rating;
+@synthesize isFavorite = _isFavorite;
 
 + (NSArray *)recommendationsFromArray:(NSArray *)array {
     NSMutableArray *results = [NSMutableArray arrayWithCapacity:[array count]];
@@ -65,6 +66,7 @@
 #warning This needs to be fixed
     recommendation.startsAt = [NSDate date];
     recommendation.rating = [dict valueForKey:@"rating"];
+    recommendation.isFavorite = [[dict valueForKeyPath:@"is_favorite"] boolValue];
     
     return recommendation;
 }

@@ -18,7 +18,8 @@
           "latitude":"-129.00",
           "longitude":"22.123",
           "starts_at":"12-01-12 9:00",
-          "rating":4.5         
+          "rating":4.5,
+          "is_favorite":true        
           },
           
           {
@@ -34,7 +35,8 @@
             "latitude":"-129.00",
             "longitude":"22.123",
             "starts_at":"12-01-12 9:00",
-            "rating":5          
+            "rating":5,
+            "is_favorite":false         
             },
             
             {
@@ -50,7 +52,8 @@
               "latitude":"-129.00",
               "longitude":"22.123",
               "starts_at":"12-01-12 9:00",
-              "rating":3        
+              "rating":3,
+              "is_favorite":false       
               },
       ]
     }

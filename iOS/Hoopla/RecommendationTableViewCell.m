@@ -10,6 +10,10 @@
 
 @implementation RecommendationTableViewCell
 @synthesize titleLabel;
+@synthesize subtitleLabel;
+@synthesize favoriteImageView;
+
+@synthesize recommendation = _recommendation;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -33,6 +37,21 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setRecommendation:(Recommendation *)recommendation {
+    if (_recommendation != recommendation) {
+        _recommendation = recommendation;
+        
+        self.titleLabel.text = recommendation.title;
+        self.subtitleLabel.text = recommendation.subtitle;
+        
+        if (recommendation.isFavorite) {
+            self.favoriteImageView.image = [UIImage imageNamed:@"suggestionstar-selected"];
+        } else {
+            self.favoriteImageView.image = [UIImage imageNamed:@"suggestionstar-unselected"];
+        }
+    }
 }
 
 @end

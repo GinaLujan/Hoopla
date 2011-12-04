@@ -12,6 +12,13 @@
 		835162C8148B6416001357FE /* tablecellbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 835162C6148B6416001357FE /* tablecellbg@2x.png */; };
 		8353B8B0148B4C7A00AA0141 /* tabbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8353B8AF148B4C7A00AA0141 /* tabbarbg.png */; };
 		8353B8B4148B4DC500AA0141 /* Recommendation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8353B8B3148B4DC500AA0141 /* Recommendation.m */; };
+		836E5E75148B952600E13EEE /* ROCKB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E74148B952600E13EEE /* ROCKB.TTF */; };
+		836E5E78148B96BD00E13EEE /* tabicon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E76148B96BD00E13EEE /* tabicon-star.png */; };
+		836E5E79148B96BD00E13EEE /* tabicon-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E77148B96BD00E13EEE /* tabicon-star@2x.png */; };
+		836E5E7E148B971800E13EEE /* suggestionstar-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E7A148B971800E13EEE /* suggestionstar-selected.png */; };
+		836E5E7F148B971800E13EEE /* suggestionstar-selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E7B148B971800E13EEE /* suggestionstar-selected@2x.png */; };
+		836E5E80148B971800E13EEE /* suggestionstar-unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E7C148B971800E13EEE /* suggestionstar-unselected.png */; };
+		836E5E81148B971800E13EEE /* suggestionstar-unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 836E5E7D148B971800E13EEE /* suggestionstar-unselected@2x.png */; };
 		8387EC9A148AFFAA00D6C3BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC99148AFFAA00D6C3BF /* UIKit.framework */; };
 		8387EC9C148AFFAA00D6C3BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9B148AFFAA00D6C3BF /* Foundation.framework */; };
 		8387EC9E148AFFAA00D6C3BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */; };
@@ -53,6 +60,13 @@
 		8353B8AF148B4C7A00AA0141 /* tabbarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarbg.png; sourceTree = "<group>"; };
 		8353B8B2148B4DC500AA0141 /* Recommendation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommendation.h; sourceTree = "<group>"; };
 		8353B8B3148B4DC500AA0141 /* Recommendation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommendation.m; sourceTree = "<group>"; };
+		836E5E74148B952600E13EEE /* ROCKB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ROCKB.TTF; sourceTree = "<group>"; };
+		836E5E76148B96BD00E13EEE /* tabicon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-star.png"; sourceTree = "<group>"; };
+		836E5E77148B96BD00E13EEE /* tabicon-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabicon-star@2x.png"; sourceTree = "<group>"; };
+		836E5E7A148B971800E13EEE /* suggestionstar-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestionstar-selected.png"; sourceTree = "<group>"; };
+		836E5E7B148B971800E13EEE /* suggestionstar-selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestionstar-selected@2x.png"; sourceTree = "<group>"; };
+		836E5E7C148B971800E13EEE /* suggestionstar-unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestionstar-unselected.png"; sourceTree = "<group>"; };
+		836E5E7D148B971800E13EEE /* suggestionstar-unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "suggestionstar-unselected@2x.png"; sourceTree = "<group>"; };
 		8387EC95148AFFAA00D6C3BF /* Hoopla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoopla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8387EC99148AFFAA00D6C3BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8387EC9B148AFFAA00D6C3BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +132,14 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
+		836E5E72148B94B600E13EEE /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				836E5E74148B952600E13EEE /* ROCKB.TTF */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		8387EC8A148AFFA900D6C3BF = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +175,7 @@
 		8387EC9F148AFFAA00D6C3BF /* Hoopla */ = {
 			isa = PBXGroup;
 			children = (
+				836E5E72148B94B600E13EEE /* Font */,
 				83E43243148B262600D9371E /* Storyboards */,
 				8332AE13148B6D3F00067005 /* TableViewCells */,
 				83E4324E148B42ED00D9371E /* Images */,
@@ -250,6 +273,12 @@
 		83E4324E148B42ED00D9371E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				836E5E7A148B971800E13EEE /* suggestionstar-selected.png */,
+				836E5E7B148B971800E13EEE /* suggestionstar-selected@2x.png */,
+				836E5E7C148B971800E13EEE /* suggestionstar-unselected.png */,
+				836E5E7D148B971800E13EEE /* suggestionstar-unselected@2x.png */,
+				836E5E76148B96BD00E13EEE /* tabicon-star.png */,
+				836E5E77148B96BD00E13EEE /* tabicon-star@2x.png */,
 				83C87D4A148B805400EC0053 /* selectedtab.png */,
 				83C87D4B148B805400EC0053 /* selectedtab@2x.png */,
 				835162C5148B6416001357FE /* tablecellbg.png */,
@@ -344,6 +373,13 @@
 				835162C8148B6416001357FE /* tablecellbg@2x.png in Resources */,
 				83C87D4C148B805400EC0053 /* selectedtab.png in Resources */,
 				83C87D4D148B805400EC0053 /* selectedtab@2x.png in Resources */,
+				836E5E75148B952600E13EEE /* ROCKB.TTF in Resources */,
+				836E5E78148B96BD00E13EEE /* tabicon-star.png in Resources */,
+				836E5E79148B96BD00E13EEE /* tabicon-star@2x.png in Resources */,
+				836E5E7E148B971800E13EEE /* suggestionstar-selected.png in Resources */,
+				836E5E7F148B971800E13EEE /* suggestionstar-selected@2x.png in Resources */,
+				836E5E80148B971800E13EEE /* suggestionstar-unselected.png in Resources */,
+				836E5E81148B971800E13EEE /* suggestionstar-unselected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,5 +11,9 @@
 @interface RecommendationTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *subtitleLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *favoriteImageView;
+
+@property (nonatomic, strong) Recommendation *recommendation;
 
 @end
