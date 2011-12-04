@@ -10,7 +10,8 @@
 
 @interface HooplaTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *results;
+@property (nonatomic, strong) NSMutableArray *results;
+@property (nonatomic, strong) NSMutableArray *sections;
 
 
 - (void)fetchedData:(NSData *)responseData;

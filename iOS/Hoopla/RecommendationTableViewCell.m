@@ -19,6 +19,15 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tablecellbg"]];
+    UIView *bgView = [[UIView alloc] initWithFrame:self.frame];
+    bgView.backgroundColor = UI_COLOR_PRIMARY;
+    [bgView addSubview:imageView];
+    self.backgroundView = bgView;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

@@ -26,6 +26,8 @@
 		8387ECD0148AFFAA00D6C3BF /* HooplaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */; };
 		8387ECDF148B04C200D6C3BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECDE148B04C200D6C3BF /* CoreLocation.framework */; };
 		8387ECE1148B04EC00D6C3BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */; };
+		83C87D4C148B805400EC0053 /* selectedtab.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C87D4A148B805400EC0053 /* selectedtab.png */; };
+		83C87D4D148B805400EC0053 /* selectedtab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C87D4B148B805400EC0053 /* selectedtab@2x.png */; };
 		83CBBCFD148B48D200698A33 /* tabbarbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CBBCFC148B48D200698A33 /* tabbarbg@2x.png */; };
 		83E43246148B2B0E00D9371E /* HooplaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E43245148B2B0E00D9371E /* HooplaTableViewController.m */; };
 		83E43249148B310500D9371E /* Recommendations.json in Resources */ = {isa = PBXBuildFile; fileRef = 83E43248148B310500D9371E /* Recommendations.json */; };
@@ -70,6 +72,8 @@
 		8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HooplaTests.m; sourceTree = "<group>"; };
 		8387ECDE148B04C200D6C3BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83C87D4A148B805400EC0053 /* selectedtab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedtab.png; sourceTree = "<group>"; };
+		83C87D4B148B805400EC0053 /* selectedtab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectedtab@2x.png"; sourceTree = "<group>"; };
 		83CBBCFC148B48D200698A33 /* tabbarbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarbg@2x.png"; sourceTree = "<group>"; };
 		83E43240148B16D500D9371E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		83E43244148B2B0E00D9371E /* HooplaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HooplaTableViewController.h; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 		83E4324E148B42ED00D9371E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				83C87D4A148B805400EC0053 /* selectedtab.png */,
+				83C87D4B148B805400EC0053 /* selectedtab@2x.png */,
 				835162C5148B6416001357FE /* tablecellbg.png */,
 				835162C6148B6416001357FE /* tablecellbg@2x.png */,
 				8353B8AF148B4C7A00AA0141 /* tabbarbg.png */,
@@ -336,6 +342,8 @@
 				8353B8B0148B4C7A00AA0141 /* tabbarbg.png in Resources */,
 				835162C7148B6416001357FE /* tablecellbg.png in Resources */,
 				835162C8148B6416001357FE /* tablecellbg@2x.png in Resources */,
+				83C87D4C148B805400EC0053 /* selectedtab.png in Resources */,
+				83C87D4D148B805400EC0053 /* selectedtab@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

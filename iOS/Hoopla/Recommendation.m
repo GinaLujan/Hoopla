@@ -30,7 +30,22 @@
     for (NSDictionary *dict in array) {
         [results addObject:[self recommendationFromDict:dict]];
     }
-    return results;
+    
+    NSSortDescriptor *categorySorter = 
+        [[NSSortDescriptor alloc] initWithKey:@"category"
+                                    ascending:YES
+                                     selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    NSSortDescriptor *titleSorter = 
+    [[NSSortDescriptor alloc] initWithKey:@"title"
+                                ascending:YES
+                                 selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    NSArray *descriptors = [NSArray arrayWithObjects:categorySorter, titleSorter, nil];
+    return [results sortedArrayUsingDescriptors:descriptors];
+    
+//    NSLog(@"Ressults: %@", results);
+//    return results;
 }
 
 + (id)recommendationFromDict:(NSDictionary *)dict {
@@ -52,5 +67,9 @@
     recommendation.rating = [dict valueForKey:@"rating"];
     
     return recommendation;
+}
+
+- (NSString *)description {
+    return self.title;
 }
 @end

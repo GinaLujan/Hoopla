@@ -22,10 +22,11 @@
     [self startLocationManager];
     
     //Appearence
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.2471 green:0.1137 blue:0.1294 alpha:1.0000]];
+    [[UINavigationBar appearance] setTintColor:UI_COLOR_PRIMARY];
     
     //[[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.2471 green:0.1137 blue:0.1294 alpha:1.0000]];
     [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbarbg"]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"selectedtab"]];
     
     return YES;
 }

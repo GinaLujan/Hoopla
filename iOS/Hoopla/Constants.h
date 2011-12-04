@@ -11,3 +11,5 @@
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 
+#define UI_COLOR_PRIMARY [UIColor colorWithRed:0.2471 green:0.1137 blue:0.1294 alpha:1.0000]
+

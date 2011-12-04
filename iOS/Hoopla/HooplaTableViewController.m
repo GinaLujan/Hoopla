@@ -14,12 +14,14 @@
 
 @implementation HooplaTableViewController
 @synthesize results = _results;
+@synthesize sections = _sections;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.results = [NSArray array];
+        self.results = [NSMutableArray array];
+        self.sections = [NSMutableArray array];
     }
     return self;
 }
@@ -60,11 +62,6 @@
                                                      ofType:@"json"];
     
     NSData *data = [NSData dataWithContentsOfFile:path];
-    //    NSString *content = [NSString stringWithContentsOfFile:path
-    //                                                  encoding:NSUTF8StringEncoding
-    //                                                     error:NULL];
-    
-    NSLog(@"%@", data);
     [self fetchedData:data];
 }
 
@@ -101,28 +98,28 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    //return [_results count];
-    return 1;
+    return [_sections count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_results count];
-    // Return the number of rows in the section.
-    //return [[_results objectAtIndex:section] count];
+    return [[_results objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RecommendationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationCell"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tablecellbg"]];
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 45)];
-    [bgView addSubview:imageView];
-    cell.backgroundView = bgView;
-    Recommendation *recommendation = [_results objectAtIndex:[indexPath row]];
+    
+    NSArray *recsInSection = [_results objectAtIndex:[indexPath section]];
+    
+    Recommendation *recommendation = [recsInSection objectAtIndex:[indexPath row]];
     cell.titleLabel.text = recommendation.title;
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [_sections objectAtIndex:section];
 }
 
 /*
@@ -182,17 +179,30 @@
     
     NSError *error;
     NSDictionary *json = [NSJSONSerialization 
-                          JSONObjectWithData:responseData //1
-                          
+                          JSONObjectWithData:responseData
                           options:kNilOptions 
                           error:&error];
+    NSArray *rawArray = [json valueForKeyPath:@"data.recommendations"];
     
-    NSArray *recommendations = [json valueForKeyPath:@"data.recommendations"]; //2
+    NSLog(@"Response: %@ - %i", rawArray, [rawArray count]);
     
-    NSLog(@"recos: %i", [recommendations count]); //3
+    NSArray *recommendations = [Recommendation recommendationsFromArray:rawArray];
     
-    self.results = [Recommendation recommendationsFromArray:recommendations];
-    NSLog(@"%i", [_results count]);
+    NSLog(@"%@", recommendations);
+    
+    self.sections = [NSMutableArray array];
+    self.results = [NSMutableArray array];
+    
+    NSString *currentCategory = nil;
+    for (Recommendation *rec in recommendations) {
+        if (![rec.category isEqualToString:currentCategory]) {
+            [_sections addObject:rec.category];
+            [_results addObject:[NSMutableArray array]];
+            currentCategory = rec.category;
+        }
+        [[_results objectAtIndex:[_results count] - 1] addObject:rec];
+    }
+    NSLog(@"Results: %@", _results);
     [self.tableView reloadData];
 }
 
