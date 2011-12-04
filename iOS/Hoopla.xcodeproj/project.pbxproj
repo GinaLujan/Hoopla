@@ -14,10 +14,8 @@
 		8387ECA6148AFFAA00D6C3BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECA5148AFFAA00D6C3BF /* main.m */; };
 		8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */; };
 		8387ECAD148AFFAA00D6C3BF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECAB148AFFAA00D6C3BF /* MainStoryboard.storyboard */; };
-		8387ECB0148AFFAA00D6C3BF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECAF148AFFAA00D6C3BF /* FirstViewController.m */; };
 		8387ECB2148AFFAA00D6C3BF /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECB1148AFFAA00D6C3BF /* first.png */; };
 		8387ECB4148AFFAA00D6C3BF /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECB3148AFFAA00D6C3BF /* first@2x.png */; };
-		8387ECB7148AFFAA00D6C3BF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECB6148AFFAA00D6C3BF /* SecondViewController.m */; };
 		8387ECB9148AFFAA00D6C3BF /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECB8148AFFAA00D6C3BF /* second.png */; };
 		8387ECBB148AFFAA00D6C3BF /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECBA148AFFAA00D6C3BF /* second@2x.png */; };
 		8387ECC3148AFFAA00D6C3BF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECC2148AFFAA00D6C3BF /* SenTestingKit.framework */; };
@@ -25,6 +23,8 @@
 		8387ECC5148AFFAA00D6C3BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387EC9B148AFFAA00D6C3BF /* Foundation.framework */; };
 		8387ECCD148AFFAA00D6C3BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8387ECCB148AFFAA00D6C3BF /* InfoPlist.strings */; };
 		8387ECD0148AFFAA00D6C3BF /* HooplaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */; };
+		8387ECDF148B04C200D6C3BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECDE148B04C200D6C3BF /* CoreLocation.framework */; };
+		8387ECE1148B04EC00D6C3BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,27 +42,25 @@
 		8387EC99148AFFAA00D6C3BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8387EC9B148AFFAA00D6C3BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8387ECA1148AFFAA00D6C3BF /* Hoopla-Info.plist */ = {isa = PBXFileReference; path = "Hoopla-Info.plist"; sourceTree = "<group>"; };
+		8387ECA1148AFFAA00D6C3BF /* Hoopla-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hoopla-Info.plist"; sourceTree = "<group>"; };
 		8387ECA3148AFFAA00D6C3BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8387ECA5148AFFAA00D6C3BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8387ECA7148AFFAA00D6C3BF /* Hoopla-Prefix.pch */ = {isa = PBXFileReference; path = "Hoopla-Prefix.pch"; sourceTree = "<group>"; };
-		8387ECA8148AFFAA00D6C3BF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		8387ECA7148AFFAA00D6C3BF /* Hoopla-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoopla-Prefix.pch"; sourceTree = "<group>"; };
+		8387ECA8148AFFAA00D6C3BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8387ECAC148AFFAA00D6C3BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8387ECAE148AFFAA00D6C3BF /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
-		8387ECAF148AFFAA00D6C3BF /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		8387ECB1148AFFAA00D6C3BF /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		8387ECB3148AFFAA00D6C3BF /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		8387ECB5148AFFAA00D6C3BF /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
-		8387ECB6148AFFAA00D6C3BF /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		8387ECB8148AFFAA00D6C3BF /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		8387ECBA148AFFAA00D6C3BF /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		8387ECC1148AFFAA00D6C3BF /* HooplaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HooplaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8387ECC2148AFFAA00D6C3BF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8387ECCA148AFFAA00D6C3BF /* HooplaTests-Info.plist */ = {isa = PBXFileReference; path = "HooplaTests-Info.plist"; sourceTree = "<group>"; };
+		8387ECCA148AFFAA00D6C3BF /* HooplaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HooplaTests-Info.plist"; sourceTree = "<group>"; };
 		8387ECCC148AFFAA00D6C3BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8387ECCE148AFFAA00D6C3BF /* HooplaTests.h */ = {isa = PBXFileReference; path = HooplaTests.h; sourceTree = "<group>"; };
+		8387ECCE148AFFAA00D6C3BF /* HooplaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HooplaTests.h; sourceTree = "<group>"; };
 		8387ECCF148AFFAA00D6C3BF /* HooplaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HooplaTests.m; sourceTree = "<group>"; };
+		8387ECDE148B04C200D6C3BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8387ECE1148B04EC00D6C3BF /* QuartzCore.framework in Frameworks */,
+				8387ECDF148B04C200D6C3BF /* CoreLocation.framework in Frameworks */,
 				8387EC9A148AFFAA00D6C3BF /* UIKit.framework in Frameworks */,
 				8387EC9C148AFFAA00D6C3BF /* Foundation.framework in Frameworks */,
 				8387EC9E148AFFAA00D6C3BF /* CoreGraphics.framework in Frameworks */,
@@ -111,6 +111,8 @@
 		8387EC98148AFFAA00D6C3BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8387ECE0148B04EC00D6C3BF /* QuartzCore.framework */,
+				8387ECDE148B04C200D6C3BF /* CoreLocation.framework */,
 				8387EC99148AFFAA00D6C3BF /* UIKit.framework */,
 				8387EC9B148AFFAA00D6C3BF /* Foundation.framework */,
 				8387EC9D148AFFAA00D6C3BF /* CoreGraphics.framework */,
@@ -122,15 +124,12 @@
 		8387EC9F148AFFAA00D6C3BF /* Hoopla */ = {
 			isa = PBXGroup;
 			children = (
+				8387ECD9148B028800D6C3BF /* Managers */,
 				8387ECA8148AFFAA00D6C3BF /* AppDelegate.h */,
 				8387ECA9148AFFAA00D6C3BF /* AppDelegate.m */,
 				8387ECAB148AFFAA00D6C3BF /* MainStoryboard.storyboard */,
-				8387ECAE148AFFAA00D6C3BF /* FirstViewController.h */,
-				8387ECAF148AFFAA00D6C3BF /* FirstViewController.m */,
 				8387ECB1148AFFAA00D6C3BF /* first.png */,
 				8387ECB3148AFFAA00D6C3BF /* first@2x.png */,
-				8387ECB5148AFFAA00D6C3BF /* SecondViewController.h */,
-				8387ECB6148AFFAA00D6C3BF /* SecondViewController.m */,
 				8387ECB8148AFFAA00D6C3BF /* second.png */,
 				8387ECBA148AFFAA00D6C3BF /* second@2x.png */,
 				8387ECA0148AFFAA00D6C3BF /* Supporting Files */,
@@ -166,6 +165,13 @@
 				8387ECCB148AFFAA00D6C3BF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8387ECD9148B028800D6C3BF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +287,6 @@
 			files = (
 				8387ECA6148AFFAA00D6C3BF /* main.m in Sources */,
 				8387ECAA148AFFAA00D6C3BF /* AppDelegate.m in Sources */,
-				8387ECB0148AFFAA00D6C3BF /* FirstViewController.m in Sources */,
-				8387ECB7148AFFAA00D6C3BF /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

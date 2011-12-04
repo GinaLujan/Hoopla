@@ -8,13 +8,18 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate (Private)
+- (void)startLocationManager;
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize currentLocation = _currentLocation;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [self startLocationManager];
     return YES;
 }
 							
@@ -32,6 +37,7 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
+    [locationManager stopUpdatingLocation];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -39,6 +45,7 @@
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
+    [locationManager startUpdatingLocation];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -55,6 +62,44 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+- (void)startLocationManager {
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = 10; //(1609.344 * .25); //meters * miles
+    [locationManager startUpdatingLocation];
+}
+
+- (void)setCurrentLocation:(CLLocationCoordinate2D)currentLocation {
+    _currentLocation = currentLocation;
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"LocationUpdated" object:self]];
+}
+
+#pragma mark - 
+#pragma mark CLLocationManagerDelegate Methods
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+		   fromLocation:(CLLocation *)oldLocation {
+    
+    
+    self.currentLocation = newLocation.coordinate;
+    NSLog(@"Updated: %g, %g", self.currentLocation.longitude, self.currentLocation.latitude);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    
+    if (error.code == kCLErrorDenied || error.code == kCLErrorNetwork) {
+        [manager stopUpdatingLocation];
+        self.currentLocation = CLLocationCoordinate2DMake(47.620975, -122.244186);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Location Services", nil) 
+                                                        message:NSLocalizedString(@"We are unable to determine your location, please enable Location Services.", nil)
+                                                       delegate:nil cancelButtonTitle:@"OK" 
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
 }
 
 @end
