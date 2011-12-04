@@ -15,6 +15,8 @@
 @synthesize results = _results;
 @synthesize sections = _sections;
 @synthesize favTapGestureRecognizer = _favTapGestureRecognizer;
+@synthesize tappedIndexPath;
+@synthesize controlIndexPath;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -53,6 +55,9 @@
     self.navigationController.navigationBar.layer.shadowRadius = 3.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     self.navigationController.navigationBar.layer.masksToBounds = NO;
+    
+    //LoadingView *loading = [[LoadingView alloc] init];
+    //[self.view addSubview:loading];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -99,7 +104,11 @@
     // Assume self.view is the table view
     if ([segue.identifier isEqualToString:@"RecommendationDetailSegue"]) {
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        Recommendation *recommendation = [[_results objectAtIndex:[path section]] objectAtIndex:[path row]];
+        NSInteger row = path.row;
+        if ([path isEqual:self.controlIndexPath]) {
+            row--;
+        }
+        Recommendation *recommendation = [[_results objectAtIndex:path.section] objectAtIndex:row];
         [segue.destinationViewController setRecommendation:recommendation];
     }
 }
@@ -114,19 +123,29 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[_results objectAtIndex:section] count];
+    NSInteger rowCount = [[_results objectAtIndex:section] count];
+    if (self.controlIndexPath && self.controlIndexPath.section == section) {
+        rowCount++;
+    }
+    return rowCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RecommendationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationCell"];
-    
-    NSArray *recsInSection = [_results objectAtIndex:[indexPath section]];
-    
-    Recommendation *recommendation = [recsInSection objectAtIndex:[indexPath row]];
-    cell.recommendation = recommendation;
-    
-    return cell;
+    if ([indexPath isEqual:self.controlIndexPath]) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationControlCell"];
+        return cell;
+    } else {
+        RecommendationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendationCell"];
+        
+        NSArray *recsInSection = [_results objectAtIndex:[indexPath section]];
+        
+        Recommendation *recommendation = [recsInSection objectAtIndex:[indexPath row]];
+        cell.recommendation = recommendation;
+        cell.delegate = self;
+        
+        return cell;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -205,6 +224,8 @@
 - (void)fetchedData:(NSData *)responseData {
     //parse out the json data
     
+    self.tappedIndexPath = nil;
+    self.controlIndexPath = nil;
     NSError *error;
     NSDictionary *json = [NSJSONSerialization 
                           JSONObjectWithData:responseData
@@ -234,8 +255,66 @@
     [self.tableView reloadData];
 }
 
-- (void)favoriteToggled:(BOOL)isSelected {
+- (void)favoriteToggled:(BOOL)isSelected forRecommendation:(Recommendation *)recommendation  {
+    NSLog(@"Favorite Tapped");
+}
+
+- (void)infoSelected:(Recommendation *)recommendation {
+    NSLog(@"Info Tapped");
+    NSIndexPath *indexPath = [self indexPathForRecommendation:recommendation];
     
+    NSIndexPath *indexPathToDelete = self.controlIndexPath;
+    if ([indexPath isEqual:self.tappedIndexPath]) {
+        self.tappedIndexPath = nil;
+        self.controlIndexPath = nil;
+    } else {
+        self.tappedIndexPath = indexPath;
+        self.controlIndexPath = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+    }
+    
+    [self.tableView beginUpdates];
+    if (indexPathToDelete) {
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPathToDelete] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
+    if (controlIndexPath) {
+        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:controlIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
+    [self.tableView endUpdates];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath isEqual:self.controlIndexPath]) {
+        return self.tappedIndexPath;
+    }
+    return indexPath;
+}
+
+- (NSIndexPath *)indexPathForRecommendation:(Recommendation *)recommendation {
+    NSString *section;
+    Recommendation *resultRec;
+    NSInteger sectionIdx;
+    NSInteger rowIdx;
+    
+    for (uint i = 0; i < [_sections count]; i++) {
+        section = [_sections objectAtIndex:i];
+        if ([recommendation.category isEqualToString:section]) {
+            sectionIdx = i;
+            break;
+        }
+    }
+    
+    for (uint i = 0; i < [_results count]; i++) {
+        resultRec = [[_results objectAtIndex:sectionIdx] objectAtIndex:i];
+        if ([recommendation.identifier isEqualToString:resultRec.identifier]) {
+            rowIdx = i;
+            break;
+        }
+    }
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowIdx inSection:sectionIdx];
+    return indexPath;
 }
 
 @end

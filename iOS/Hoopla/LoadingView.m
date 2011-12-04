@@ -7,20 +7,30 @@
 //
 
 #import "LoadingView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation LoadingView
 
 - (id)init {
-    if ((self = [super initWithFrame:CGRectMake(200, 200, 200, 200)])) {
+    if ((self = [self initWithFrame:CGRectMake(30, 50, 100, 100)])) {
         
     }
     return self;
 }
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _spinnerImageView = [[UIImageView alloc] initWithImage:[UIImage animatedImageNamed:@"Loading" duration:1.0f]];
+
+        _spinnerImageView.frame = self.frame;
+        _spinnerImageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        [self addSubview:_spinnerImageView];
+        self.layer.cornerRadius = 15;
+        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        self.opaque = NO;
     }
     return self;
 }

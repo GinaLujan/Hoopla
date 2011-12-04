@@ -13,4 +13,5 @@
     #import <Foundation/Foundation.h>
     #import "Constants.h"
     #import "Recommendation.h"
+    #import "LoadingView.h"
 #endif

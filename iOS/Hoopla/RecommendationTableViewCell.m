@@ -13,6 +13,7 @@
 @synthesize subtitleLabel;
 @synthesize favoriteImageView;
 @synthesize delegate;
+@synthesize infoImageView;
 
 @synthesize recommendation = _recommendation;
 
@@ -32,8 +33,11 @@
     [bgView addSubview:imageView];
     self.backgroundView = bgView;
     
-    _favTapGestrure = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteTapped:)];
-    [self.favoriteImageView addGestureRecognizer:_favTapGestrure];
+    _favTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteTapped:)];
+    [self.favoriteImageView addGestureRecognizer:_favTapGesture];
+    
+    _infoTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(infoTapped:)];
+    [self.infoImageView addGestureRecognizer:_infoTapGesture];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -56,9 +60,12 @@
 }
 
 - (IBAction)favoriteTapped:(id)sender {
-    NSLog(@"Tapped");
     [self toggleStar:!_isStarred];
-    [delegate favoriteToggled:_isStarred];
+    [delegate favoriteToggled:_isStarred forRecommendation:_recommendation];
+}
+
+- (IBAction)infoTapped:(id)sender {
+    [delegate infoSelected:_recommendation];
 }
 
 - (void)toggleStar:(BOOL)isSelected {

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoadingView : UIView
+@interface LoadingView : UIView {
+    UIImageView *_spinnerImageView;
+}
 
 @end

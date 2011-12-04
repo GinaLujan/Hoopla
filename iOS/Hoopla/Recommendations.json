@@ -5,7 +5,7 @@
     {
       "recommendations":[
         {
-          "id":12345,
+          "id":"12345",
           "category":"Food",
           "type":"Mexican",
           "title":"Flamingo's Cafe",
@@ -23,7 +23,7 @@
           },
           
           {
-            "id":12346,
+            "id":"12346",
             "category":"Entertainment",
             "type":"Movie",
             "title":"Paranormal Activity", 
@@ -40,7 +40,7 @@
             },
             
             {
-              "id":12347,
+              "id":"12347",
               "category":"Food",
               "type":"American",
               "title":"Jose's Cafe", 
@@ -59,7 +59,7 @@
       
       "favorites":[
         {
-          "id":12345,
+          "id":"12345",
           "category":"Food",
           "type":"Mexican",
           "title":"Flaco's Tacos",
@@ -77,7 +77,7 @@
           },
           
           {
-            "id":12346,
+            "id":"12346",
             "category":"Entertainment",
             "type":"Movie",
             "title":"Ghost Busters", 
@@ -94,7 +94,7 @@
             },
             
             {
-              "id":12347,
+              "id":"12347",
               "category":"Food",
               "type":"American",
               "title":"Jose's Cafe", 

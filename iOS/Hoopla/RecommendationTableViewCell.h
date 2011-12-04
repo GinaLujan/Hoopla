@@ -8,28 +8,33 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol FavoriteToggledDelegate;
+@protocol RecommendationTableViewCellDelegate;
 
 @interface RecommendationTableViewCell : UITableViewCell {
-    UITapGestureRecognizer *_favTapGestrure;
+    UITapGestureRecognizer *_favTapGesture;
+    UITapGestureRecognizer *_infoTapGesture;
     BOOL _isStarred;
 }
 
-@property (weak) id <FavoriteToggledDelegate>delegate;
+@property (weak) id <RecommendationTableViewCellDelegate>delegate;
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *subtitleLabel;
 @property (nonatomic, strong) IBOutlet UIImageView *favoriteImageView;
 
 @property (nonatomic, strong) Recommendation *recommendation;
 
+@property (nonatomic, strong) IBOutlet UIImageView *infoImageView;
+
 - (IBAction)favoriteTapped:(id)sender;
+- (IBAction)infoTapped:(id)sender;
 - (void)toggleStar:(BOOL)isSelected;
 @end
 
-@protocol FavoriteToggledDelegate <NSObject>
+@protocol RecommendationTableViewCellDelegate <NSObject>
 
 @optional
 
-- (void)favoriteToggled:(BOOL)isSelected;
+- (void)favoriteToggled:(BOOL)isSelected forRecommendation:(Recommendation *)recommendation;
+- (void)infoSelected:(Recommendation *)recommendation;
 
 @end

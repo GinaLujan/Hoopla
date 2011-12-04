@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "RecommendationTableViewCell.h"
 
-@interface HooplaTableViewController : UITableViewController <FavoriteToggledDelegate>
+@interface HooplaTableViewController : UITableViewController <RecommendationTableViewCellDelegate>
 
 @property (nonatomic, strong) NSMutableArray *results;
 @property (nonatomic, strong) NSMutableArray *sections;
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *favTapGestureRecognizer;
 
+@property (strong, nonatomic) NSIndexPath *tappedIndexPath;
+@property (strong, nonatomic) NSIndexPath *controlIndexPath;
+
 - (void)fetchedData:(NSData *)responseData;
+- (NSIndexPath *)indexPathForRecommendation:(Recommendation *)recommendation;
 
 @end
