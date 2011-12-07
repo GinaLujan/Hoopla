@@ -19,7 +19,7 @@
           "latitude":"37.3324",
           "starts_at":"12-01-12 9:00",
           "rating":4.5,
-          "is_favorite":true        
+          "is_favorite":false        
           },
           
           {
@@ -71,7 +71,7 @@
                 "latitude":"37.3324",
                 "starts_at":"12-01-12 9:00",
                 "rating":4.5,
-                "is_favorite":true        
+                "is_favorite":false        
                 },
                 
                 {
@@ -89,7 +89,7 @@
                   "latitude":"37.3324",
                   "starts_at":"12-01-12 9:00",
                   "rating":4.5,
-                  "is_favorite":true        
+                  "is_favorite":false        
                   },
                   
                   {
@@ -107,7 +107,7 @@
                     "latitude":"37.3324",
                     "starts_at":"12-01-12 9:00",
                     "rating":4.5,
-                    "is_favorite":true        
+                    "is_favorite":false        
                     },
                     
                     {
@@ -125,7 +125,7 @@
                       "latitude":"37.3324",
                       "starts_at":"12-01-12 9:00",
                       "rating":4.5,
-                      "is_favorite":true        
+                      "is_favorite":false        
                       },
                       
                       
@@ -145,7 +145,7 @@
                       "latitude":"37.3324",
                       "starts_at":"12-01-12 9:00",
                       "rating":4.5,
-                      "is_favorite":true        
+                      "is_favorite":false        
                       },
                       
                       {
@@ -163,14 +163,14 @@
                       "latitude":"37.3324",
                       "starts_at":"12-01-12 9:00",
                       "rating":4.5,
-                      "is_favorite":true        
+                      "is_favorite":false        
                       },
       ],
       
       "favorites":[
         {
           "id":"12345",
-          "category":"Food",
+          "category":"Today",
           "type":"",
           "title":"Mexican Food",
           "subtitle":"@Flaco's Tacos",
@@ -188,7 +188,7 @@
           
           {
             "id":"12346",
-            "category":"Entertainment",
+            "category":"Tonight",
             "type":"Movie",
             "title":"Ghost Busters", 
             "subtitle":"@The Metreon",
@@ -205,7 +205,7 @@
             
             {
               "id":"12347",
-              "category":"Food",
+              "category":"Weekend",
               "type":"",
               "title":"American Food", 
               "subtitle":"Jose's Cafe",
